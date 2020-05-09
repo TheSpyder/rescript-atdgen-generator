@@ -14,10 +14,10 @@
   resolved "https://registry.yarnpkg.com/@glennsl/bs-json/-/bs-json-5.0.2.tgz#cfb85d94d370ec6dc17849e0ddb1a51eee08cfcc"
   integrity sha512-vVlHJNrhmwvhyea14YiV4L5pDLjqw1edE3GzvMxlbPPQZVhzgO3sTWrUxCpQd2gV+CkMfk4FHBYunx9nWtBoDg==
 
-"@jchavarri/bs-atdgen-generator@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@jchavarri/bs-atdgen-generator/-/bs-atdgen-generator-0.0.4.tgz#1aec567ad5cd4d085a3190a4b4e51dd91d0bb56c"
-  integrity sha512-hykC31t6YUt51ke9xrnCDopxPoIlIZASK1gqilmmWvRvzpPStk64FbvGQjVZk+9mugnILbRcCqitpafcvQhhXw==
+"@jchavarri/bs-atdgen-generator@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@jchavarri/bs-atdgen-generator/-/bs-atdgen-generator-0.0.5.tgz#6df93d58395c4d9d22051a665698a552868cf02a"
+  integrity sha512-jF1fsUbvewGMgav2/MxM6nHzYD+DDWhYDWMvrK3cpdLamb1baVlbmOyyTJVW5XjjJHNqYO1QLNCVzcYkF9Rdjg==
 
 bs-platform@7.3.2:
   version "7.3.2"
