@@ -40,21 +40,13 @@ jobs:
       - name: Build
         run: esy build
 
-      # - name: "[Test] esy install"
-      #   run: esy install
-      #   working-directory: test
+      - name: "[Test] yarn install"
+        run: yarn install
+        working-directory: test
 
-      # - name: "[Test] esy build"
-      #   run: esy build
-      #   working-directory: test
-
-      # - name: "[Test] yarn install"
-      #   run: yarn install
-      #   working-directory: test
-
-      # - name: "[Test] yarn build"
-      #   run: yarn build
-      #   working-directory: test
+      - name: "[Test] yarn build"
+        run: yarn build
+        working-directory: test
 
       - if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' 
         name: (Mac, Linux) Get atdgen path

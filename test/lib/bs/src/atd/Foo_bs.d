@@ -1,0 +1,2 @@
+src/atd/Foo_bs-BsAtdgenGeneratorIntegrationTest.cmj : BsAtdgenGeneratorIntegrationTest.cmi src/atd/Foo_t-BsAtdgenGeneratorIntegrationTest.cmj src/atd/Foo_t-BsAtdgenGeneratorIntegrationTest.cmi
+src/atd/Foo_bs-BsAtdgenGeneratorIntegrationTest.cmi : BsAtdgenGeneratorIntegrationTest.cmi src/atd/Foo_t-BsAtdgenGeneratorIntegrationTest.cmi

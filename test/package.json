@@ -8,7 +8,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "7.3.2",
-    "@jchavarri/bs-atdgen-generator": "0.0.1"
+    "@jchavarri/bs-atdgen-generator": "0.0.3",
+    "bs-platform": "7.3.2"
+  },
+  "dependencies": {
+    "@ahrefs/bs-atdgen-codec-runtime": "^2.0.1"
   }
 }

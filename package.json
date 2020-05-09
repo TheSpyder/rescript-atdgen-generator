@@ -1,6 +1,6 @@
 {
   "name": "@jchavarri/bs-atdgen-generator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Atdgen prebuilt binaries for 3 major OS platforms.",
   "author": "Javier Chávarri <javier.chavarri@gmail.com>",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "url": "https://github.com/jchavarri/bs-atdgen-generator.git"
   },
   "scripts": {
-    "postinstall": "node ./copyPlatformBinaryInPlace.js"
+    "preinstall": "node ./copyPlatformBinaryInPlace.js"
   },
   "publishConfig": {
     "access": "public"

@@ -10,23 +10,32 @@
       "command": "yarn run atdgen -bs $in"
     }
   ],
-  "sources": {
-    "dir": "src",
-    "subdirs": true,
-    "generators": [
-      {
-        "name": "atd_t",
-        "edge": ["Foo_t.ml", "Foo_t.mli", ":", "Foo.atd"]
-      },
-      {
-        "name": "atd_bs",
-        "edge": ["Foo_bs.ml", "Foo_bs.mli", ":", "Foo.atd"]
-      }
-    ]
-  },
+  "sources": [
+    "src",
+    {
+      "dir": "src/atd",
+      "generators": [
+        {
+          "name": "atd_t",
+          "edge": ["Foo_t.ml", "Foo_t.mli", ":", "Foo.atd"]
+        },
+        {
+          "name": "atd_bs",
+          "edge": ["Foo_bs.ml", "Foo_bs.mli", ":", "Foo.atd"]
+        }
+      ]
+    }
+  ],
   "package-specs": {
     "module": "commonjs",
     "in-source": true
   },
-  "suffix": ".bs.js"
+  "suffix": ".bs.js",
+  "bs-dependencies": ["@ahrefs/bs-atdgen-codec-runtime"],
+  "warnings": {
+    "error": "+101"
+  },
+  "generate-merlin": true,
+  "namespace": true,
+  "refmt": 3
 }
