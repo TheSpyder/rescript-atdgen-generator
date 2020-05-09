@@ -46,21 +46,21 @@ jobs:
       - name: Build
         run: esy build
 
-      - name: "[Test] esy install"
-        run: esy install
-        working-directory: test
+      # - name: "[Test] esy install"
+      #   run: esy install
+      #   working-directory: test
 
-      - name: "[Test] esy build"
-        run: esy build
-        working-directory: test
+      # - name: "[Test] esy build"
+      #   run: esy build
+      #   working-directory: test
 
-      - name: "[Test] yarn install"
-        run: yarn install
-        working-directory: test
+      # - name: "[Test] yarn install"
+      #   run: yarn install
+      #   working-directory: test
 
-      - name: "[Test] yarn build"
-        run: yarn build
-        working-directory: test
+      # - name: "[Test] yarn build"
+      #   run: yarn build
+      #   working-directory: test
 
       - name: Get atdgen path
         id: atdgen-path
@@ -116,6 +116,8 @@ jobs:
           mkdir -p exe
           ls -la binaries
           ls -la binaries/darwin
+          ls -la binaries/windows
+          ls -la binaries/linux
           mv binaries/darwin/atdgen exe/bs-atdgen-generator-darwin-x64.exe
           mv binaries/windows/atdgen.exe exe/bs-atdgen-generator-win-x64.exe
           mv binaries/linux/atdgen exe/bs-atdgen-generator-linux-x64.exe
