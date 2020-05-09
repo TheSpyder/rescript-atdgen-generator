@@ -13,7 +13,9 @@
     "decoding",
     "encoding"
   ],
-  "bin": "./atdgen",
+  "bin": {
+    "atdgen": "atdgen"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jchavarri/bs-atdgen-generator.git"
