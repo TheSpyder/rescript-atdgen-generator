@@ -62,7 +62,7 @@ jobs:
 
       - name: Get atdgen path
         id: atdgen-path
-        run: echo "::set-output name=path::$(esy type -P atdgen)"
+        run: echo "::set-output name=path::$(esy which atdgen)"
 
       - name: Upload artifacts ${{ matrix.os }}
         # if: github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/')
