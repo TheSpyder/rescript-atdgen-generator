@@ -41,7 +41,7 @@ jobs:
         run: esy build
 
       - name: "[Test] npm install"
-        run: npm
+        run: npm install
         working-directory: test
 
       - name: "[Test] npm run build"
