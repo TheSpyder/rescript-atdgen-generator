@@ -2,10 +2,6 @@ name: Build bs-atdgen-generator
 
 on: [push, pull_request]
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   test_and_build:
     runs-on: ${{ matrix.os }}
@@ -60,25 +56,30 @@ jobs:
       #   run: yarn build
       #   working-directory: test
 
-      - name: Get atdgen path
+      - if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' 
+        name: (Mac, Linux) Get atdgen path
         id: atdgen-path
         run: echo "::set-output name=path::$(esy which atdgen)"
 
-      - if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' 
+      - if: matrix.os == 'windows-latest'
+        name: (Windows) Get atdgen path
+        id: atdgen-path
+        run: echo "::set-output name=path::$(esy where atdgen)"
+        
+      - if: matrix.os == 'windows-latest'
+        name: Test
+        run: |
+          esy where atdgen
+          esy where atdgen.exe
+          esy which atdgen
+          esy which atdgen.exe
+        
         name: Upload artifacts ${{ matrix.os }}
         # if: github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/')
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.os }}
           path: ${{ steps.atdgen-path.outputs.path }}
-
-      - if: matrix.os == 'windows-latest'
-        name: Upload artifacts ${{ matrix.os }}
-        # if: github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/')
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{ matrix.os }}
-          path: ${{ steps.atdgen-path.outputs.path }}.exe
 
       - name: Cleanup
         run: |
