@@ -21,7 +21,7 @@
     "url": "https://github.com/jchavarri/bs-atdgen-generator.git"
   },
   "scripts": {
-    "preinstall": "node ./copyPlatformBinaryInPlace.js"
+    "postinstall": "node ./copyPlatformBinaryInPlace.js"
   },
   "publishConfig": {
     "access": "public"
