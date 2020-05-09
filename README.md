@@ -12,6 +12,7 @@ With yarn:
 
 ```
 yarn add -D @jchavarri/bs-atdgen-generator
+yarn --check-files
 ```
 
 Tell bsb which files need to be processed:

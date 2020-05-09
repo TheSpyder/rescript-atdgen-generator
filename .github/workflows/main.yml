@@ -43,10 +43,12 @@ jobs:
       - name: "[Test] npm install"
         run: npm install
         working-directory: test
+        shell: bash
 
       - name: "[Test] npm run build"
         run: npm run build
         working-directory: test
+        shell: bash
 
       - if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' 
         name: (Mac, Linux) Get atdgen path
