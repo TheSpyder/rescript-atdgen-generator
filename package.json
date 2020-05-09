@@ -1,0 +1,26 @@
+{
+  "name": "@jchavarri/bs-atdgen-generator",
+  "version": "0.0.1",
+  "description": "Atdgen prebuilt binaries for 3 major OS platforms.",
+  "author": "Javier Chávarri <javier.chavarri@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "reasonml",
+    "reason",
+    "bucklescript",
+    "ocaml",
+    "atdgen",
+    "decoding",
+    "encoding"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jchavarri/bs-atdgen-generator.git"
+  },
+  "scripts": {
+    "postinstall": "node ./copyPlatformBinaryInPlace.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
