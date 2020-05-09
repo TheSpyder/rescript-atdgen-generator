@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@jchavarri/bs-atdgen-generator": "0.0.6",
+    "@jchavarri/bs-atdgen-generator": "0.0.7",
     "bs-platform": "7.3.2"
   },
   "dependencies": {

@@ -40,12 +40,12 @@ jobs:
       - name: Build
         run: esy build
 
-      - name: "[Test] yarn"
-        run: yarn
+      - name: "[Test] npm install"
+        run: npm
         working-directory: test
 
-      - name: "[Test] yarn build"
-        run: yarn build
+      - name: "[Test] npm run build"
+        run: npm run build
         working-directory: test
 
       - if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' 

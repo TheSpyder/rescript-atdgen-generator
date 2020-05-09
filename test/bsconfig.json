@@ -3,11 +3,11 @@
   "generators": [
     {
       "name": "atd_t",
-      "command": "yarn run atdgen -t $in"
+      "command": "npx atdgen -t $in"
     },
     {
       "name": "atd_bs",
-      "command": "yarn run atdgen -bs $in"
+      "command": "npx atdgen -bs $in"
     }
   ],
   "sources": [
