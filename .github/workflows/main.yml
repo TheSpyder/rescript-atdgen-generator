@@ -40,8 +40,8 @@ jobs:
       - name: Build
         run: esy build
 
-      - name: "[Test] yarn install"
-        run: yarn install
+      - name: "[Test] yarn"
+        run: yarn
         working-directory: test
 
       - name: "[Test] yarn build"

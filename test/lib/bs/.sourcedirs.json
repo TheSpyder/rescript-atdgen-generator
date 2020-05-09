@@ -1,1 +1,0 @@
-{ "dirs" : [ "src/atd" , "src" ] , "pkgs" : [ [ "bs-platform" , "/Users/javi/Development/github/bs-atdgen-generator/test/node_modules/bs-platform" ] , [ "@ahrefs/bs-atdgen-codec-runtime" , "/Users/javi/Development/github/bs-atdgen-generator/test/node_modules/@ahrefs/bs-atdgen-codec-runtime" ] ] , "generated" : [ "Foo_bs.ml" , "Foo_bs.mli" , "Foo_t.ml" , "Foo_t.mli" ] }
