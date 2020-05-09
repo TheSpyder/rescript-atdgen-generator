@@ -1,6 +1,6 @@
 {
   "name": "@jchavarri/bs-atdgen-generator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Atdgen prebuilt binaries for 3 major OS platforms.",
   "author": "Javier Chávarri <javier.chavarri@gmail.com>",
   "license": "MIT",
