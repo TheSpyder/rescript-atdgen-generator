@@ -1,0 +1,32 @@
+{
+  "name": "bs-atdgen-generator-integration-test",
+  "generators": [
+    {
+      "name": "atd_t",
+      "command": "yarn run atdgen -t $in"
+    },
+    {
+      "name": "atd_bs",
+      "command": "yarn run atdgen -bs $in"
+    }
+  ],
+  "sources": {
+    "dir": "src",
+    "subdirs": true,
+    "generators": [
+      {
+        "name": "atd_t",
+        "edge": ["Foo_t.ml", "Foo_t.mli", ":", "Foo.atd"]
+      },
+      {
+        "name": "atd_bs",
+        "edge": ["Foo_bs.ml", "Foo_bs.mli", ":", "Foo.atd"]
+      }
+    ]
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js"
+}

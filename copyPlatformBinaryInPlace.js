@@ -13,7 +13,7 @@ if (platform === "win32") {
   platform = "win";
 }
 
-copyBinary("exe/bs-atdgen-generator-" + platform + "-" + arch + ".exe", "ppx");
+copyBinary("exe/bs-atdgen-generator-" + platform + "-" + arch + ".exe", "atdgen");
 
 function copyBinary(filename, destFilename) {
   var supported = fs.existsSync(filename);
