@@ -91,6 +91,11 @@ jobs:
         run: node makeBsconfig "npx atdgen"
         working-directory: test
         
+      - name: "[Test] npm run build (last published version - bash)"
+        run: npm run build
+        working-directory: test
+        shell: bash
+
       - if: matrix.os == 'windows-latest'
         name: "(Windows) [Test] Generate bsconfig.json for published version in bash"
         env:
@@ -99,7 +104,7 @@ jobs:
         working-directory: test
         shell: bash
         
-      - name: "[Test] npm run build (last published version)"
+      - name: "[Test] npm run build (last published version - powershell)"
         run: npm run build
         working-directory: test
 
