@@ -1,6 +1,6 @@
 {
   "name": "@jchavarri/bs-atdgen-generator",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Atdgen prebuilt binaries for 3 major OS platforms.",
   "author": "Javier Chávarri <javier.chavarri@gmail.com>",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "encoding"
   ],
   "bin": {
-    "atdgen.exe": "./atdgen.exe"
+    "atdgen": "./atdgen.exe"
   },
   "repository": {
     "type": "git",
