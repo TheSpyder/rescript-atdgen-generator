@@ -43,7 +43,6 @@ jobs:
       - name: "[Test] npm install"
         run: npm install
         working-directory: test
-        shell: bash
 
       - if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' 
         name: (Mac, Linux) Get atdgen path
@@ -68,6 +67,7 @@ jobs:
           ATDGEN_PATH: ${{ steps.atdgen-path-win.outputs.path }}
         run: node makeBsconfig "$ATDGEN_PATH"
         working-directory: test
+        shell: bash
         
       - name: "[Test] npm run build (latest)"
         run: npm run build
@@ -85,26 +85,17 @@ jobs:
         working-directory: test
 
       - if: matrix.os == 'windows-latest'
-        name: "(Windows) [Test] Generate bsconfig.json for published version in powershell"
-        env:
-          ATDGEN_PATH: ${{ steps.atdgen-path-win.outputs.path }}
-        run: node makeBsconfig "npx atdgen"
-        working-directory: test
-        
-      - name: "[Test] npm run build (last published version - bash)"
-        run: npm run build
-        working-directory: test
-        shell: bash
-
-      - if: matrix.os == 'windows-latest'
-        name: "(Windows) [Test] Generate bsconfig.json for published version in bash"
+        name: "(Windows) [Test] Generate bsconfig.json for published version"
         env:
           ATDGEN_PATH: ${{ steps.atdgen-path-win.outputs.path }}
         run: node makeBsconfig "cmd /c npx atdgen"
         working-directory: test
-        shell: bash
         
-      - name: "[Test] npm run build (last published version - powershell)"
+      - name: "[Test] npm run clean"
+        run: npm run clean
+        working-directory: test
+
+      - name: "[Test] npm run build (last published version)"
         run: npm run build
         working-directory: test
 
