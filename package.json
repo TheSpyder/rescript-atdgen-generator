@@ -14,7 +14,7 @@
     "encoding"
   ],
   "bin": {
-    "atdgen": "./atdgen.exe"
+    "atdgen.exe": "./atdgen.exe"
   },
   "repository": {
     "type": "git",
