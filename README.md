@@ -76,7 +76,7 @@ the way [ninja calls CreateProcess](https://github.com/jchavarri/bs-atdgen-gener
 
 In order to use atdgen for this platform, there are two options:
 
-1. Use relative path
+#### 1. Use relative path
 
 In `bsconfig.json`:
 
@@ -95,7 +95,7 @@ In `bsconfig.json`:
 ],
 ```
 
-2. Use `cmd /c`:
+#### 2. Use `cmd /c`:
 
 ```diff
 "generators": [
