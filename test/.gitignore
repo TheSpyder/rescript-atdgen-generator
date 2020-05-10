@@ -2,3 +2,4 @@ src/atd/*.ml
 src/atd/*.mli
 *.bs.js
 lib/
+bsconfig.json
