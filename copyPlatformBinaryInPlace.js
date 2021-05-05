@@ -32,7 +32,7 @@ function copyBinary(filename, destFilename) {
     );
     console.error("specify that you are on the " + platform + " platform,");
     console.error("on the " + arch + " architecture.");
-
+    return;
   }
 
   if (!fs.existsSync(destFilename)) {
