@@ -13,7 +13,13 @@ if (platform === "win32") {
   platform = "win";
 }
 
-copyBinary("exe/bs-atdgen-generator-" + platform + "-" + arch + ".exe", "atdgen");
+if (platform === "darwin" && arch === "arm64") {
+  // use rosetta until an Apple Silicon build is available
+  // https://github.com/actions/virtual-environments/issues/2187
+  arch = "x64"
+}
+
+copyBinary(`exe/bs-atdgen-generator-${platform}-${arch}.exe`, "atdgen");
 
 function copyBinary(filename, destFilename) {
   var supported = fs.existsSync(filename);
