@@ -6,6 +6,6 @@
     "@opam/atdgen": "github:ahrefs/atd:atdgen.opam#6a1f166"
   },
   "devDependencies": {
-    "ocaml": "~4.7.1"
+    "ocaml": "*"
   }
 }
