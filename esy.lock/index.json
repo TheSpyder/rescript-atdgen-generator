@@ -1,5 +1,5 @@
 {
-  "checksum": "16445bc3e479173febf9cb675305a829",
+  "checksum": "46b5204e565eb1767159f7152ede1811",
   "root": "bs-atdgen-generator@link-dev:./esy.json",
   "node": {
     "ocaml@4.12.0@d41d8cd9": {
@@ -22,9 +22,7 @@
       "version": "link-dev:./esy.json",
       "source": { "type": "link-dev", "path": ".", "manifest": "esy.json" },
       "overrides": [],
-      "dependencies": [
-        "@opam/atdgen@github:ahrefs/atd:atdgen.opam#6a1f166@d41d8cd9"
-      ],
+      "dependencies": [ "@opam/atdgen@opam:2.2.1@6ace3080" ],
       "devDependencies": [ "ocaml@4.12.0@d41d8cd9" ]
     },
     "@opam/yojson@opam:1.7.0@69d87312": {
@@ -346,13 +344,21 @@
         "@opam/biniou@opam:1.2.1@420bda02"
       ]
     },
-    "@opam/atdgen@github:ahrefs/atd:atdgen.opam#6a1f166@d41d8cd9": {
-      "id": "@opam/atdgen@github:ahrefs/atd:atdgen.opam#6a1f166@d41d8cd9",
+    "@opam/atdgen@opam:2.2.1@6ace3080": {
+      "id": "@opam/atdgen@opam:2.2.1@6ace3080",
       "name": "@opam/atdgen",
-      "version": "github:ahrefs/atd:atdgen.opam#6a1f166",
+      "version": "opam:2.2.1",
       "source": {
         "type": "install",
-        "source": [ "github:ahrefs/atd:atdgen.opam#6a1f166" ]
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/db/db6b4c1a6293b214a7b7a3da435e681abd1b16b55d5aa246b93d26736d3a559e#sha256:db6b4c1a6293b214a7b7a3da435e681abd1b16b55d5aa246b93d26736d3a559e",
+          "archive:https://github.com/ahrefs/atd/releases/download/2.2.1/atd-2.2.1.tbz#sha256:db6b4c1a6293b214a7b7a3da435e681abd1b16b55d5aa246b93d26736d3a559e"
+        ],
+        "opam": {
+          "name": "atdgen",
+          "version": "2.2.1",
+          "path": "esy.lock/opam/atdgen.2.2.1"
+        }
       },
       "overrides": [],
       "dependencies": [
