@@ -1,3 +1,6 @@
+# Project is under migration
+The installation instructions still point to the old binaries, the project has changed owners but I haven't had a chance to publish binaries under my name yet. Apologies.
+
 # bs-atdgen-generator
 
 [Atdgen](https://github.com/ahrefs/atd) prebuilt binaries for 3 major OS platforms.
