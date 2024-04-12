@@ -47,12 +47,12 @@ jobs:
       - if: matrix.os != 'windows-latest'
         name: (Mac, Linux) Get atdgen path
         id: atdgen-path-nix
-        run: echo "::set-output name=path::$(esy which atdgen)"
+        run: echo "path=$(esy which atdgen)" >> "$GITHUB_OUTPUT"
 
       - if: matrix.os == 'windows-latest'
         name: (Windows) Get atdgen path
         id: atdgen-path-win
-        run: echo "::set-output name=path::$(esy where atdgen)"
+        run: echo "path=$(esy where atdgen)" >> "$GITHUB_OUTPUT"
         
       - if: matrix.os != 'windows-latest' 
         name: "(Mac, Linux) [Test] Generate bsconfig.json"

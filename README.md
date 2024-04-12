@@ -5,7 +5,8 @@ The installation instructions still point to the old binaries, the project has c
 
 [Atdgen](https://github.com/ahrefs/atd) prebuilt binaries for 3 major OS platforms.
 
-Mainly for BuckleScript users, to avoid the step of installing esy.
+This is capped at version 2.15.0, after that 
+https://github.com/ahrefs/atd/pull/375
 
 ## Getting started
 
