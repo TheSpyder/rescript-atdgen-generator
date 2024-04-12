@@ -13,26 +13,20 @@ if (platform === "win32") {
   platform = "win";
 }
 
-if (platform === "darwin" && arch === "arm64") {
-  // use rosetta until an Apple Silicon build is available
-  // https://github.com/actions/virtual-environments/issues/2187
-  arch = "x64"
-}
-
-copyBinary(`exe/bs-atdgen-generator-${platform}-${arch}.exe`, "atdgen");
+copyBinary(`exe/rescript-atdgen-generator-${platform}-${arch}.exe`, "atdgen");
 
 function copyBinary(filename, destFilename) {
   var supported = fs.existsSync(filename);
 
   if (!supported) {
-    console.error("bs-atdgen-generator does not support this platform :(");
+    console.error("rescript-atdgen-generator does not support this platform :(");
     console.error("");
     console.error(
-      "bs-atdgen-generator comes prepacked as built binaries to avoid large"
+      "rescript-atdgen-generator comes prepacked as built binaries to avoid large"
     );
     console.error("dependencies at build-time.");
     console.error("");
-    console.error("If you want bs-atdgen-generator to support this platform natively,");
+    console.error("If you want rescript-atdgen-generator to support this platform natively,");
     console.error(
       "please open an issue at our repository, linked above. Please"
     );

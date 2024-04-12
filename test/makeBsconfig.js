@@ -9,7 +9,7 @@ const atdgenPath = process.argv[2];
 
 const bsconfigJson = JSON.stringify(
   {
-    name: "bs-atdgen-generator-integration-test",
+    name: "rescript-atdgen-generator-integration-test",
     generators: [
       {
         name: "atd_t",

@@ -1,13 +1,11 @@
 {
-  "name": "@jchavarri/bs-atdgen-generator",
+  "name": "rescript-atdgen-generator",
   "version": "0.1.0",
   "description": "Atdgen prebuilt binaries for 3 major OS platforms.",
-  "author": "Javier Chávarri <javier.chavarri@gmail.com>",
+  "author": "Andrew Herron",
   "license": "MIT",
   "keywords": [
-    "reasonml",
-    "reason",
-    "bucklescript",
+    "rescript",
     "ocaml",
     "atdgen",
     "decoding",
@@ -18,12 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jchavarri/bs-atdgen-generator.git"
+    "url": "https://github.com/TheSpyder/rescript-atdgen-generator.git"
   },
   "scripts": {
     "preinstall": "node ./copyPlatformBinaryInPlace.js"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "contributors": [
+    "Javier Chávarri <javier.chavarri@gmail.com>"
+  ]
 }
