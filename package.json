@@ -12,11 +12,11 @@
     "encoding"
   ],
   "bin": {
-    "atdgen": "./atdgen.exe"
+    "atdgen": "atdgen.exe"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheSpyder/rescript-atdgen-generator.git"
+    "url": "git+https://github.com/TheSpyder/rescript-atdgen-generator.git"
   },
   "scripts": {
     "preinstall": "node ./copyPlatformBinaryInPlace.js"

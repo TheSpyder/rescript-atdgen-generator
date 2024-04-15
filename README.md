@@ -32,11 +32,11 @@ We then need to define `atd` as a generator in `rescript.json`. For compatibilit
 "generators": [
   {
     "name": "atd_types",
-    "command": "../../node_modules/rescript-atdgen-generator/atdgen.exe -t $in"
+    "command": "../../node_modules/.bin/atdgen -t $in"
   },
   {
     "name": "atd_runtime",
-    "command": "../../node_modules/rescript-atdgen-generator/atdgen.exe -bs $in"
+    "command": "../../node_modules/.bin/atdgen -bs $in"
   }
 ],
 ```

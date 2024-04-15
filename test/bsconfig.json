@@ -3,11 +3,11 @@
   "generators": [
     {
       "name": "atd_t",
-      "command": "../../node_modules/@jchavarri/bs-atdgen-generator/atdgen.exe -t $in"
+      "command": "../../node_modules/.bin/atdgen -t $in"
     },
     {
       "name": "atd_bs",
-      "command": "../../node_modules/@jchavarri/bs-atdgen-generator/atdgen.exe -bs $in"
+      "command": "../../node_modules/.bin/atdgen -bs $in"
     }
   ],
   "sources": [
