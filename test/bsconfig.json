@@ -1,0 +1,51 @@
+{
+  "name": "rescript-atdgen-generator-integration-test",
+  "generators": [
+    {
+      "name": "atd_t",
+      "command": "../../node_modules/rescript-atdgen-generator/atdgen.exe -t $in"
+    },
+    {
+      "name": "atd_bs",
+      "command": "../../node_modules/rescript-atdgen-generator/atdgen.exe -bs $in"
+    }
+  ],
+  "sources": [
+    "src",
+    {
+      "dir": "src/atd",
+      "generators": [
+        {
+          "name": "atd_t",
+          "edge": [
+            "Foo_t.ml",
+            "Foo_t.mli",
+            ":",
+            "Foo.atd"
+          ]
+        },
+        {
+          "name": "atd_bs",
+          "edge": [
+            "Foo_bs.ml",
+            "Foo_bs.mli",
+            ":",
+            "Foo.atd"
+          ]
+        }
+      ]
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+    "@ahrefs/bs-atdgen-codec-runtime"
+  ],
+  "warnings": {
+    "error": "+101"
+  },
+  "namespace": true
+}
