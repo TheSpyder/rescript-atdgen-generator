@@ -69,11 +69,11 @@ jobs:
         working-directory: test
         shell: bash
         
-      - name: "[Test] npm run build (latest)"
+      - name: "[Test] npm run build (dev)"
         run: npm run build
         working-directory: test
 
-      - name: "[Test] Install latest"
+      - name: "[Test] Install last published version"
         run: npm install @jchavarri/bs-atdgen-generator --save-dev
         working-directory: test
 
@@ -167,10 +167,10 @@ jobs:
           ls -la binaries/darwin
           ls -la binaries/windows
           ls -la binaries/linux
-          mv binaries/darwin-arm64/atdgen exe/bs-atdgen-generator-darwin-arm64.exe
-          mv binaries/darwin/atdgen exe/bs-atdgen-generator-darwin-x64.exe
-          mv binaries/windows/atdgen.exe exe/bs-atdgen-generator-win-x64.exe
-          mv binaries/linux/atdgen exe/bs-atdgen-generator-linux-x64.exe
+          mv binaries/darwin-arm64/atdgen exe/rescript-atdgen-generator-darwin-arm64.exe
+          mv binaries/darwin/atdgen exe/rescript-atdgen-generator-darwin-x64.exe
+          mv binaries/windows/atdgen.exe exe/rescript-atdgen-generator-win-x64.exe
+          mv binaries/linux/atdgen exe/rescript-atdgen-generator-linux-x64.exe
 
       - name: Upload release artifacts
         # if: github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/')
