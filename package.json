@@ -1,6 +1,6 @@
 {
   "name": "rescript-atdgen-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Atdgen prebuilt binaries for 3 major OS platforms.",
   "author": "Andrew Herron",
   "license": "MIT",

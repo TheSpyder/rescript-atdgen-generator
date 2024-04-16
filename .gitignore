@@ -7,3 +7,5 @@ _release
 *.native
 *.install
 exe/
+Release.zip
+rescript-atdgen-generator-*.tgz
